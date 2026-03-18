@@ -164,7 +164,7 @@ a {
 }
 
 .profile-banner {
-  height: 210px;
+  height: 190px;
   border-radius: 28px 28px 0 0;
   position: relative;
   overflow: hidden;
@@ -184,21 +184,21 @@ a {
   position: absolute;
   inset: 0;
   background:
-    linear-gradient(180deg, rgba(6,19,22,0.15), rgba(6,19,22,0.45)),
-    radial-gradient(circle at 22% 38%, rgba(95,208,200,0.10), transparent 22%),
-    radial-gradient(circle at 72% 28%, rgba(31,163,163,0.10), transparent 20%);
+    linear-gradient(180deg, rgba(6,19,22,0.22), rgba(6,19,22,0.50)),
+    radial-gradient(circle at 22% 38%, rgba(95,208,200,0.08), transparent 22%),
+    radial-gradient(circle at 72% 28%, rgba(31,163,163,0.08), transparent 20%);
 }
 
 .profile-photo-wrap {
   position: absolute;
-  left: 26px;
-  bottom: -34px;
+  left: 28px;
+  bottom: -22px;
   z-index: 3;
 }
 
 .profile-photo {
-  width: 86px;
-  height: 86px;
+  width: 78px;
+  height: 78px;
   border-radius: 999px;
   border: 4px solid #08181c;
   box-shadow: var(--shadow);
@@ -209,17 +209,9 @@ a {
 .profile-header-card {
   margin-top: 0;
   border-top-left-radius: 0;
-  padding-top: 70px;
-  padding-left: 26px;
-  padding-right: 26px;
-}
-
-.profile-header-main {
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) 170px;
-  gap: 24px;
-  align-items: start;
-  padding-left: 0;
+  padding-top: 52px;
+  padding-left: 24px;
+  padding-right: 24px;
 }
 
 .glass-card {
@@ -237,6 +229,13 @@ a {
   box-shadow: 0 24px 56px rgba(0, 0, 0, 0.38);
 }
 
+.profile-header-main {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 156px;
+  gap: 20px;
+  align-items: center;
+  padding-left: 0;
+}
 
 .section-kicker {
   margin: 0 0 10px;
@@ -253,7 +252,7 @@ a {
 
 .profile-header-main h1 {
   margin: 0 0 8px;
-  font-size: clamp(1.75rem, 3.6vw, 2.8rem);
+  font-size: clamp(1.6rem, 3.2vw, 2.45rem);
   line-height: 1.08;
   letter-spacing: -0.03em;
 }
@@ -261,14 +260,15 @@ a {
 .profile-title {
   margin: 0 0 10px;
   color: #d8efef;
-  font-size: 0.94rem;
+  font-size: 0.92rem;
   font-weight: 700;
 }
 
 .profile-intro {
   color: var(--muted);
-  max-width: 600px;
+  max-width: 560px;
   margin: 0;
+  font-size: 0.98rem;
 }
 
 .hero-tags,
@@ -280,8 +280,8 @@ a {
 }
 
 .hero-tags {
-  margin-top: 22px;
-  margin-bottom: 4px;
+  margin-top: 16px;
+  margin-bottom: 0;
 }
 
 .tag,
@@ -298,7 +298,7 @@ a {
 .profile-actions {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 9px;
   min-width: 0;
   align-self: center;
 }
@@ -308,7 +308,7 @@ a {
   align-items: center;
   justify-content: center;
   border-radius: 999px;
-  padding: 11px 16px;
+  padding: 10px 14px;
   font-weight: 700;
   text-decoration: none;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
@@ -622,31 +622,45 @@ a {
 
 @media (max-width: 640px) {
   .profile-banner {
-    height: 165px;
+    height: 150px;
   }
 
   .profile-photo-wrap {
-  left: 18px;
-  bottom: -26px;
-}
+    left: 18px;
+    bottom: -20px;
+  }
 
-.profile-photo {
-  width: 72px;
-  height: 72px;
-}
+  .profile-photo {
+    width: 64px;
+    height: 64px;
+  }
 
-.profile-header-card {
-  padding-top: 54px;
-  padding-left: 18px;
-  padding-right: 18px;
-}
+  .profile-header-card {
+    padding-top: 44px;
+    padding-left: 16px;
+    padding-right: 16px;
+  }
 
-.profile-header-card .hero-tags {
-  margin-top: 18px;
-}
+  .profile-header-main {
+    grid-template-columns: 1fr;
+    gap: 16px;
+    align-items: start;
+  }
 
   .profile-header-main h1 {
-    font-size: 2.2rem;
+    font-size: 2rem;
+  }
+
+  .profile-title {
+    font-size: 0.9rem;
+  }
+
+  .profile-intro {
+    font-size: 0.95rem;
+  }
+
+  .hero-tags {
+    margin-top: 14px;
   }
 
   .btn {
@@ -658,3 +672,6 @@ a {
     grid-template-columns: 1fr;
   }
 }
+just think overall . can more improvements be brought? or is it enough. you can also check the page live if needed. tell suggestions.  
+Also if you are suggesting something from web, check it. 
+Don't rewrite code yet. just think overall.
