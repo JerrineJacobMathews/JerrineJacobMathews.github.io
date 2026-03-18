@@ -10,22 +10,34 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet"
+  >
 
   <link rel="stylesheet" href="assets/css/style.css" />
 </head>
 <body>
+  <div class="bg-orb orb-1"></div>
+  <div class="bg-orb orb-2"></div>
+  <div class="bg-grid"></div>
+
   <header class="site-header">
     <div class="container nav">
       <a class="brand" href="#top">Jerrine Jacob Mathews</a>
 
-      <nav class="main-nav">
+      <button class="menu-toggle" id="menu-toggle" aria-label="Toggle navigation">
+        ☰
+      </button>
+
+      <nav class="main-nav" id="main-nav">
         <a href="#about" data-i18n="nav.about">About</a>
+        <a href="#experience" data-i18n="nav.experience">Experience</a>
+        <a href="#education" data-i18n="nav.education">Education</a>
         <a href="#expertise" data-i18n="nav.expertise">Expertise</a>
         <a href="#projects" data-i18n="nav.projects">Projects</a>
         <a href="#research" data-i18n="nav.research">Research</a>
         <a href="#publications" data-i18n="nav.publications">Publications</a>
-        <a href="#resume" data-i18n="nav.resume">Resume</a>
         <a href="#contact" data-i18n="nav.contact">Contact</a>
       </nav>
 
@@ -37,19 +49,26 @@
   </header>
 
   <main id="top">
-    <section class="hero-section">
-      <div class="hero-overlay"></div>
-      <div class="container hero-grid">
+    <section class="hero-section section-pad">
+      <div class="container hero-grid reveal">
         <div class="hero-copy">
-          <p class="eyebrow" data-i18n="hero.eyebrow">PERSONAL TECHNICAL PORTFOLIO</p>
+          <p class="section-kicker" data-i18n="hero.kicker">Personal Technical Portfolio</p>
           <h1 data-i18n="hero.name">Jerrine Jacob Mathews</h1>
           <p class="hero-subtitle" data-i18n="hero.subtitle">
             Software Engineer | Sensor Systems | Industrial Monitoring | Applied Optics
           </p>
           <p class="hero-intro" data-i18n="hero.intro">
-            Engineer with a background in additive manufacturing, industrial software integration,
-            microsystems engineering, and sensor-oriented technical development.
+            Engineer with interdisciplinary experience across industrial software,
+            machine connectivity, additive manufacturing, optics, sensing, diagnostics,
+            and research-oriented technical development.
           </p>
+
+          <div class="hero-tags">
+            <span class="tag" data-i18n="hero.tag1">Industrial Software</span>
+            <span class="tag" data-i18n="hero.tag2">OPC UA</span>
+            <span class="tag" data-i18n="hero.tag3">Sensors & Optics</span>
+            <span class="tag" data-i18n="hero.tag4">Laser Manufacturing</span>
+          </div>
 
           <div class="hero-actions">
             <a class="btn btn-primary" href="#projects" data-i18n="hero.btnProjects">View Projects</a>
@@ -57,253 +76,387 @@
           </div>
         </div>
 
-        <div class="hero-panel">
-          <div class="hero-card">
-            <h3 data-i18n="hero.cardTitle">Core Focus</h3>
-            <ul>
-              <li data-i18n="hero.card1">Industrial software and machine connectivity</li>
-              <li data-i18n="hero.card2">Sensor-driven monitoring and diagnostics</li>
-              <li data-i18n="hero.card3">Applied optics, signal handling, and technical prototyping</li>
+        <div class="hero-side">
+          <div class="glass-card focus-card">
+            <div class="focus-line"></div>
+            <h3 data-i18n="hero.focusTitle">Core Focus</h3>
+            <ul class="focus-list">
+              <li data-i18n="hero.focus1">Industrial software and machine-connected systems</li>
+              <li data-i18n="hero.focus2">Sensor-driven monitoring, diagnostics, and signal handling</li>
+              <li data-i18n="hero.focus3">Applied optics, technical prototyping, and engineering exploration</li>
             </ul>
+          </div>
+
+          <div class="glass-card mini-stats">
+            <div class="mini-stat">
+              <span class="mini-label" data-i18n="hero.stat1Label">Domain</span>
+              <strong data-i18n="hero.stat1Value">Laser & Additive Manufacturing</strong>
+            </div>
+            <div class="mini-stat">
+              <span class="mini-label" data-i18n="hero.stat2Label">Profile</span>
+              <strong data-i18n="hero.stat2Value">Software + Systems + Research</strong>
+            </div>
+            <div class="mini-stat">
+              <span class="mini-label" data-i18n="hero.stat3Label">Location</span>
+              <strong>Kornwestheim, DE</strong>
+            </div>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="container section quick-stats">
-      <div class="stats-grid">
-        <div class="stat-card">
-          <span class="stat-label" data-i18n="stats.label1">Focus</span>
-          <strong data-i18n="stats.value1">Industrial Software</strong>
+    <section class="container focus-strip reveal">
+      <div class="focus-strip-grid">
+        <div class="focus-strip-card">
+          <span data-i18n="strip.label1">Current Direction</span>
+          <strong data-i18n="strip.value1">Industrial Monitoring & Diagnostics</strong>
         </div>
-        <div class="stat-card">
-          <span class="stat-label" data-i18n="stats.label2">Domain</span>
-          <strong data-i18n="stats.value2">Laser & Additive Manufacturing</strong>
+        <div class="focus-strip-card">
+          <span data-i18n="strip.label2">Core Technical Areas</span>
+          <strong data-i18n="strip.value2">Software, Sensor Systems, Optics, Connectivity</strong>
         </div>
-        <div class="stat-card">
-          <span class="stat-label" data-i18n="stats.label3">Interests</span>
-          <strong data-i18n="stats.value3">Sensors, Optics, Diagnostics</strong>
+        <div class="focus-strip-card">
+          <span data-i18n="strip.label3">Flagship Project</span>
+          <strong data-i18n="strip.value3">Photonex</strong>
         </div>
       </div>
     </section>
 
-    <section id="about" class="container section">
+    <section id="about" class="container section-pad reveal">
       <div class="section-head">
         <p class="section-kicker" data-i18n="about.kicker">Profile</p>
         <h2 data-i18n="about.title">About</h2>
       </div>
-      <div class="content-card">
+
+      <div class="glass-card content-card">
         <p data-i18n="about.p1">
           I am an engineer with interdisciplinary experience across industrial software, machine systems,
-          additive manufacturing, optics, sensing, and embedded-oriented technical environments.
+          additive manufacturing, optics, sensing, embedded-oriented environments, and technical diagnostics.
         </p>
         <p data-i18n="about.p2">
           My background combines practical work on complex production systems with academic specialization
           in microsystems engineering, optics, sensors, actuators, embedded systems, and system design.
         </p>
         <p data-i18n="about.p3">
-          I am particularly interested in machine connectivity, industrial communication, sensor-driven
-          monitoring, modular software architectures, and applied technical research.
+          I am particularly interested in software for machine-connected systems, industrial communication,
+          structured signal acquisition, modular platform architecture, applied optics, and research-oriented
+          technical development.
         </p>
       </div>
     </section>
 
-    <section id="expertise" class="container section">
+    <section id="experience" class="container section-pad reveal">
+      <div class="section-head">
+        <p class="section-kicker" data-i18n="experience.kicker">Professional Path</p>
+        <h2 data-i18n="experience.title">Work Experience</h2>
+      </div>
+
+      <div class="timeline">
+        <article class="timeline-item glass-card">
+          <div class="timeline-dot"></div>
+          <div class="timeline-meta">
+            <span data-i18n="experience.e1.period">Current / Recent</span>
+          </div>
+          <div class="timeline-body">
+            <h3 data-i18n="experience.e1.title">SCC Control / 2nd Level IT Support Service Engineer</h3>
+            <p class="timeline-company" data-i18n="experience.e1.company">Industrial laser manufacturing support environment</p>
+            <p data-i18n="experience.e1.desc">
+              Support and analysis of software- and system-related issues in laser-based manufacturing systems,
+              including OPC UA communication context, industrial network diagnostics, connected system behavior,
+              and customer-facing troubleshooting workflows.
+            </p>
+            <ul>
+              <li data-i18n="experience.e1.i1">Software and system issue analysis in machine environments</li>
+              <li data-i18n="experience.e1.i2">Industrial communication and network diagnostics</li>
+              <li data-i18n="experience.e1.i3">Support for machine-connected software behavior and troubleshooting</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="timeline-item glass-card">
+          <div class="timeline-dot"></div>
+          <div class="timeline-meta">
+            <span data-i18n="experience.e2.period">Previous Role</span>
+          </div>
+          <div class="timeline-body">
+            <h3 data-i18n="experience.e2.title">Additive Manufacturing Software Engineer</h3>
+            <p class="timeline-company" data-i18n="experience.e2.company">SLM / SLS systems and production environments</p>
+            <p data-i18n="experience.e2.desc">
+              Commissioning, upgrade, configuration, testing, and validation support for additive manufacturing systems,
+              with technical context across laser, scanner, motion, safety, and integrated machine subsystems.
+            </p>
+            <ul>
+              <li data-i18n="experience.e2.i1">Machine commissioning, upgrades, and validation support</li>
+              <li data-i18n="experience.e2.i2">Configuration and process-oriented system tests</li>
+              <li data-i18n="experience.e2.i3">Integration context across laser, scanner, motion, and safety subsystems</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="timeline-item glass-card">
+          <div class="timeline-dot"></div>
+          <div class="timeline-meta">
+            <span data-i18n="experience.e3.period">Research Role</span>
+          </div>
+          <div class="timeline-body">
+            <h3 data-i18n="experience.e3.title">Research Assistant</h3>
+            <p class="timeline-company" data-i18n="experience.e3.company">University optics / sensing / measurement context</p>
+            <p data-i18n="experience.e3.desc">
+              Development of a miniaturized optical measurement head with signal processing for grinding burn detection,
+              together with comparative sensing, technical experiments, and automated test setup work.
+            </p>
+            <ul>
+              <li data-i18n="experience.e3.i1">Optical measurement head development</li>
+              <li data-i18n="experience.e3.i2">Signal processing and sensor comparison work</li>
+              <li data-i18n="experience.e3.i3">Automated test setup and technical evaluation support</li>
+            </ul>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="education" class="container section-pad reveal">
+      <div class="section-head">
+        <p class="section-kicker" data-i18n="education.kicker">Academic Foundation</p>
+        <h2 data-i18n="education.title">Education</h2>
+      </div>
+
+      <div class="card-grid three-col">
+        <article class="glass-card edu-card">
+          <h3 data-i18n="education.msc.title">M.Sc. Microsystems Engineering</h3>
+          <p class="edu-sub" data-i18n="education.msc.sub">Advanced interdisciplinary engineering focus</p>
+          <ul>
+            <li data-i18n="education.msc.i1">Optics, sensors, and actuators</li>
+            <li data-i18n="education.msc.i2">Embedded systems and microsystems design</li>
+            <li data-i18n="education.msc.i3">Technical system integration and applied engineering analysis</li>
+          </ul>
+        </article>
+
+        <article class="glass-card edu-card">
+          <h3 data-i18n="education.bme.title">B.Sc. Mechatronics</h3>
+          <p class="edu-sub" data-i18n="education.bme.sub">Mechanical, electrical, and software-oriented engineering base</p>
+          <ul>
+            <li data-i18n="education.bme.i1">System-level technical thinking</li>
+            <li data-i18n="education.bme.i2">Controls, machine-related engineering, and integration mindset</li>
+            <li data-i18n="education.bme.i3">Interfacing between hardware and software domains</li>
+          </ul>
+        </article>
+
+        <article class="glass-card edu-card">
+          <h3 data-i18n="education.bca.title">B.Sc. Computer Applications</h3>
+          <p class="edu-sub" data-i18n="education.bca.sub">Software and analytical computing foundation</p>
+          <ul>
+            <li data-i18n="education.bca.i1">Programming and software fundamentals</li>
+            <li data-i18n="education.bca.i2">Analytical problem solving and software logic</li>
+            <li data-i18n="education.bca.i3">Complementary base for engineering software development</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <section id="expertise" class="container section-pad reveal">
       <div class="section-head">
         <p class="section-kicker" data-i18n="expertise.kicker">Capabilities</p>
         <h2 data-i18n="expertise.title">Core Expertise</h2>
       </div>
 
       <div class="card-grid two-col">
-        <article class="info-card">
-          <h3 data-i18n="expertise.software.title">Software Development</h3>
+        <article class="glass-card skill-card">
+          <h3 data-i18n="expertise.s1.title">Software Development</h3>
           <ul>
-            <li data-i18n="expertise.software.i1">C, C++, C#, Python, Lua</li>
-            <li data-i18n="expertise.software.i2">WPF / desktop-oriented development direction</li>
-            <li data-i18n="expertise.software.i3">Modular software architecture</li>
-            <li data-i18n="expertise.software.i4">Logging, diagnostics, and technical tooling</li>
+            <li data-i18n="expertise.s1.i1">C, C++, C#, Python, Lua</li>
+            <li data-i18n="expertise.s1.i2">WPF and desktop-oriented development</li>
+            <li data-i18n="expertise.s1.i3">Modular architecture and technical tooling</li>
+            <li data-i18n="expertise.s1.i4">Diagnostics, logging, and engineering workflows</li>
           </ul>
         </article>
 
-        <article class="info-card">
-          <h3 data-i18n="expertise.industrial.title">Industrial & Machine Systems</h3>
+        <article class="glass-card skill-card">
+          <h3 data-i18n="expertise.s2.title">Industrial & Machine Systems</h3>
           <ul>
-            <li data-i18n="expertise.industrial.i1">OPC UA, CAN, Modbus TCP/IP</li>
-            <li data-i18n="expertise.industrial.i2">IPC–PLC troubleshooting</li>
-            <li data-i18n="expertise.industrial.i3">Machine integration and upgrades</li>
-            <li data-i18n="expertise.industrial.i4">Industrial network and system diagnostics</li>
+            <li data-i18n="expertise.s2.i1">OPC UA, CAN, Modbus TCP/IP</li>
+            <li data-i18n="expertise.s2.i2">IPC–PLC troubleshooting</li>
+            <li data-i18n="expertise.s2.i3">Machine integration and upgrade context</li>
+            <li data-i18n="expertise.s2.i4">Industrial network and system diagnostics</li>
           </ul>
         </article>
 
-        <article class="info-card">
-          <h3 data-i18n="expertise.sensors.title">Sensors, Optics & Analysis</h3>
+        <article class="glass-card skill-card">
+          <h3 data-i18n="expertise.s3.title">Sensors, Optics & Analysis</h3>
           <ul>
-            <li data-i18n="expertise.sensors.i1">Optical measurement concepts</li>
-            <li data-i18n="expertise.sensors.i2">Signal processing-oriented technical work</li>
-            <li data-i18n="expertise.sensors.i3">Sensor-based monitoring systems</li>
-            <li data-i18n="expertise.sensors.i4">Applied optics and microsystems background</li>
+            <li data-i18n="expertise.s3.i1">Optical measurement concepts</li>
+            <li data-i18n="expertise.s3.i2">Sensor-oriented technical work</li>
+            <li data-i18n="expertise.s3.i3">Signal handling and monitoring concepts</li>
+            <li data-i18n="expertise.s3.i4">Applied optics and microsystems background</li>
           </ul>
         </article>
 
-        <article class="info-card">
-          <h3 data-i18n="expertise.workflow.title">Engineering Workflow</h3>
+        <article class="glass-card skill-card">
+          <h3 data-i18n="expertise.s4.title">Engineering Workflow</h3>
           <ul>
-            <li data-i18n="expertise.workflow.i1">Technical documentation</li>
-            <li data-i18n="expertise.workflow.i2">Prototype development</li>
-            <li data-i18n="expertise.workflow.i3">Interdisciplinary problem solving</li>
-            <li data-i18n="expertise.workflow.i4">Research-oriented technical exploration</li>
+            <li data-i18n="expertise.s4.i1">Technical documentation</li>
+            <li data-i18n="expertise.s4.i2">Prototype development and concept validation</li>
+            <li data-i18n="expertise.s4.i3">Interdisciplinary problem solving</li>
+            <li data-i18n="expertise.s4.i4">Research-oriented technical exploration</li>
           </ul>
         </article>
       </div>
     </section>
 
-    <section id="projects" class="container section">
+    <section id="projects" class="container section-pad reveal">
       <div class="section-head">
         <p class="section-kicker" data-i18n="projects.kicker">Selected Work</p>
         <h2 data-i18n="projects.title">Projects</h2>
       </div>
 
-      <div class="project-list">
-        <article class="project-card featured">
-          <div class="project-media project-placeholder">
-            <div class="placeholder-badge">Photonex</div>
+      <div class="project-stack">
+        <article class="glass-card project project-featured">
+          <div class="project-visual">
+            <div class="project-visual-label">Photonex</div>
           </div>
-          <div class="project-body">
-            <h3 data-i18n="projects.photonex.title">Photonex</h3>
-            <p data-i18n="projects.photonex.desc">
+          <div class="project-content">
+            <h3 data-i18n="projects.p1.title">Photonex</h3>
+            <p data-i18n="projects.p1.desc">
               Independent development project focused on machine connectivity, sensor data acquisition,
-              structured signal handling, logging, diagnostics, and modular industrial monitoring tools.
+              structured signal handling, diagnostics, and modular industrial monitoring architecture.
             </p>
+            <div class="project-pills">
+              <span class="pill">Monitoring</span>
+              <span class="pill">OPC UA</span>
+              <span class="pill">Diagnostics</span>
+              <span class="pill">Sensor Systems</span>
+            </div>
             <ul>
-              <li data-i18n="projects.photonex.i1">Machine connectivity concepts</li>
-              <li data-i18n="projects.photonex.i2">OPC UA-based signal acquisition</li>
-              <li data-i18n="projects.photonex.i3">Structured sensor data modeling</li>
-              <li data-i18n="projects.photonex.i4">Diagnostics and logging functions</li>
+              <li data-i18n="projects.p1.i1">Machine connectivity and structured signal acquisition</li>
+              <li data-i18n="projects.p1.i2">Sensor data modeling and diagnostics</li>
+              <li data-i18n="projects.p1.i3">Architecture for industrial monitoring tools</li>
             </ul>
           </div>
         </article>
 
-        <article class="project-card">
-          <div class="project-body">
-            <h3 data-i18n="projects.licensehub.title">LicenseHub</h3>
-            <p data-i18n="projects.licensehub.desc">
-              Architecture and product concept work around licensing, entitlements, administration flows,
-              and pragmatic software platform design for industrial and technical products.
-            </p>
-            <ul>
-              <li data-i18n="projects.licensehub.i1">Licensing logic</li>
-              <li data-i18n="projects.licensehub.i2">Entitlement-oriented product structure</li>
-              <li data-i18n="projects.licensehub.i3">Administration workflow concepts</li>
-              <li data-i18n="projects.licensehub.i4">Client/server thinking</li>
-            </ul>
-          </div>
-        </article>
+        <div class="card-grid two-col">
+          <article class="glass-card project">
+            <div class="project-content">
+              <h3 data-i18n="projects.p2.title">LicenseHub</h3>
+              <p data-i18n="projects.p2.desc">
+                Architecture and product concept work around licensing, entitlements, administration workflows,
+                and pragmatic software platform design for technical products.
+              </p>
+              <ul>
+                <li data-i18n="projects.p2.i1">Licensing logic and entitlement models</li>
+                <li data-i18n="projects.p2.i2">Administration and platform workflow thinking</li>
+                <li data-i18n="projects.p2.i3">Client/server-oriented system structure</li>
+              </ul>
+            </div>
+          </article>
 
-        <article class="project-card">
-          <div class="project-body">
-            <h3 data-i18n="projects.platform.title">Industrial Software & Machine Integration Work</h3>
-            <p data-i18n="projects.platform.desc">
-              Practical and independent work across additive manufacturing systems, machine software integration,
-              upgrades, troubleshooting, process-oriented tests, and technical system understanding.
-            </p>
-            <ul>
-              <li data-i18n="projects.platform.i1">Machine commissioning and upgrades</li>
-              <li data-i18n="projects.platform.i2">Laser, scanner, motion, and safety integration context</li>
-              <li data-i18n="projects.platform.i3">Industrial troubleshooting and validation support</li>
-              <li data-i18n="projects.platform.i4">Configuration, testing, and documentation</li>
-            </ul>
-          </div>
-        </article>
+          <article class="glass-card project">
+            <div class="project-content">
+              <h3 data-i18n="projects.p3.title">Industrial Software & Machine Integration Work</h3>
+              <p data-i18n="projects.p3.desc">
+                Practical and independent work across additive manufacturing systems, upgrades, troubleshooting,
+                configuration, tests, and machine-related technical validation.
+              </p>
+              <ul>
+                <li data-i18n="projects.p3.i1">Commissioning and system upgrades</li>
+                <li data-i18n="projects.p3.i2">Process-oriented technical tests and validation</li>
+                <li data-i18n="projects.p3.i3">Integration context across machine subsystems</li>
+              </ul>
+            </div>
+          </article>
+        </div>
       </div>
     </section>
 
-    <section id="research" class="container section">
+    <section id="research" class="container section-pad reveal">
       <div class="section-head">
-        <p class="section-kicker" data-i18n="research.kicker">Direction</p>
+        <p class="section-kicker" data-i18n="research.kicker">Exploration</p>
         <h2 data-i18n="research.title">Research & Technical Exploration</h2>
       </div>
 
-      <div class="card-grid two-col">
-        <article class="info-card">
-          <h3 data-i18n="research.r1.title">Sensor-Driven Monitoring</h3>
-          <p data-i18n="research.r1.text">Exploration of software and system concepts for machine-connected monitoring, structured signal acquisition, and diagnostic visibility.</p>
-        </article>
-        <article class="info-card">
-          <h3 data-i18n="research.r2.title">Applied Optics & Sensing</h3>
-          <p data-i18n="research.r2.text">Technical interest in optical measurement systems, sensor integration, signal processing, and industrial sensing applications.</p>
-        </article>
-        <article class="info-card">
-          <h3 data-i18n="research.r3.title">Industrial Communication</h3>
-          <p data-i18n="research.r3.text">Work and continued interest in OPC UA communication, IPC–PLC troubleshooting, and connected machine architectures.</p>
-        </article>
-        <article class="info-card">
-          <h3 data-i18n="research.r4.title">Simulation & Technical Prototyping</h3>
-          <p data-i18n="research.r4.text">Ongoing direction toward prototype-driven development, engineering exploration, and technical concept validation.</p>
-        </article>
+      <div class="tabs">
+        <div class="tab-buttons">
+          <button class="tab-btn active" data-tab="tab-monitoring" data-i18n="research.tab1">Monitoring</button>
+          <button class="tab-btn" data-tab="tab-optics" data-i18n="research.tab2">Optics & Sensors</button>
+          <button class="tab-btn" data-tab="tab-systems" data-i18n="research.tab3">Systems & Communication</button>
+        </div>
+
+        <div class="tab-panels">
+          <div class="tab-panel active glass-card" id="tab-monitoring">
+            <h3 data-i18n="research.r1.title">Sensor-Driven Monitoring</h3>
+            <p data-i18n="research.r1.text">
+              Exploration of software and system concepts for machine-connected monitoring, structured signal acquisition,
+              visibility, diagnostics, and quality-oriented technical tooling.
+            </p>
+          </div>
+
+          <div class="tab-panel glass-card" id="tab-optics">
+            <h3 data-i18n="research.r2.title">Applied Optics & Sensing</h3>
+            <p data-i18n="research.r2.text">
+              Technical interest in optical measurement systems, sensor integration, signal handling,
+              measurement-oriented development, and industrial sensing applications.
+            </p>
+          </div>
+
+          <div class="tab-panel glass-card" id="tab-systems">
+            <h3 data-i18n="research.r3.title">Industrial Communication & Platform Thinking</h3>
+            <p data-i18n="research.r3.text">
+              Continued work and interest in OPC UA communication, connected machine architectures,
+              IPC–PLC troubleshooting, modular software systems, and engineering-oriented platform development.
+            </p>
+          </div>
+        </div>
       </div>
     </section>
 
-    <section id="publications" class="container section">
+    <section id="publications" class="container section-pad reveal">
       <div class="section-head">
         <p class="section-kicker" data-i18n="publications.kicker">Academic Context</p>
         <h2 data-i18n="publications.title">Publications & Research Contributions</h2>
       </div>
 
       <div class="card-grid three-col">
-        <article class="info-card">
-          <h3 data-i18n="publications.formal.title">Formal Publications</h3>
-          <p data-i18n="publications.formal.text">Formal authored publications can be listed here as journal papers, conference papers, theses, or credited technical reports.</p>
+        <article class="glass-card">
+          <h3 data-i18n="publications.f.title">Formal Publications</h3>
+          <p data-i18n="publications.f.text">
+            Formal authored publications, theses, credited reports, or conference contributions can be listed here.
+          </p>
         </article>
 
-        <article class="info-card">
-          <h3 data-i18n="publications.contrib.title">Research Contributions</h3>
-          <p data-i18n="publications.contrib.text">This section is intended for technical contributions, laboratory support work, implementation support, and project-related research assistance where formal authorship is not claimed.</p>
+        <article class="glass-card">
+          <h3 data-i18n="publications.c.title">Research Contributions</h3>
+          <p data-i18n="publications.c.text">
+            This section is intended for technical contributions, laboratory support work, implementation support,
+            and project-related research assistance where formal authorship is not claimed.
+          </p>
         </article>
 
-        <article class="info-card">
-          <h3 data-i18n="publications.note.title">Professional Note</h3>
-          <p data-i18n="publications.note.text">Items are presented with clear distinction between authorship, credited work, and indirect technical contribution.</p>
+        <article class="glass-card">
+          <h3 data-i18n="publications.n.title">Professional Note</h3>
+          <p data-i18n="publications.n.text">
+            Items should clearly distinguish between authorship, credited work, and indirect technical contribution.
+          </p>
         </article>
       </div>
     </section>
 
-    <section id="resume" class="container section">
-      <div class="section-head">
-        <p class="section-kicker" data-i18n="resume.kicker">Experience Snapshot</p>
-        <h2 data-i18n="resume.title">Resume Highlights</h2>
-      </div>
-
-      <div class="timeline">
-        <div class="timeline-item">
-          <h3 data-i18n="resume.exp1.title">SCC Control / 2nd Level IT Support Service Engineer</h3>
-          <p data-i18n="resume.exp1.text">Support and analysis of software and system-related issues in laser-based manufacturing systems, including OPC UA communication and industrial network diagnostics.</p>
-        </div>
-        <div class="timeline-item">
-          <h3 data-i18n="resume.exp2.title">Additive Manufacturing Software Engineer</h3>
-          <p data-i18n="resume.exp2.text">Commissioning, upgrade, configuration, and testing work for SLM and SLS systems, including laser, scanner, motion, and safety-related integration context.</p>
-        </div>
-        <div class="timeline-item">
-          <h3 data-i18n="resume.exp3.title">Research Assistant</h3>
-          <p data-i18n="resume.exp3.text">Development of a miniaturized optical measurement head with signal processing for grinding burn detection, alongside comparative sensing and automated test setups.</p>
-        </div>
-        <div class="timeline-item">
-          <h3 data-i18n="resume.edu.title">Education</h3>
-          <p data-i18n="resume.edu.text">M.Sc. Microsystems Engineering, B.Sc. Mechatronics, and B.Sc. Computer Applications, with focus areas including optics, sensors, actuators, embedded systems, industrial communication, and system design.</p>
-        </div>
-      </div>
-    </section>
-
-    <section id="contact" class="container section">
+    <section id="contact" class="container section-pad reveal">
       <div class="section-head">
         <p class="section-kicker" data-i18n="contact.kicker">Get in Touch</p>
         <h2 data-i18n="contact.title">Contact</h2>
       </div>
 
-      <div class="contact-box">
-        <p><strong data-i18n="contact.nameLabel">Name:</strong> Jerrine Jacob Mathews</p>
-        <p><strong data-i18n="contact.locationLabel">Location:</strong> Kornwestheim, DE</p>
-        <p><strong data-i18n="contact.emailLabel">Email:</strong> <a href="mailto:jerrine.jacob.mathews@outlook.com">jerrine.jacob.mathews@outlook.com</a></p>
-        <p><strong data-i18n="contact.githubLabel">GitHub:</strong> <a href="https://github.com/JerrineJacobMathews/" target="_blank" rel="noopener noreferrer">github.com/JerrineJacobMathews</a></p>
+      <div class="glass-card contact-card">
+        <div class="contact-grid">
+          <div>
+            <p><strong data-i18n="contact.name">Name:</strong> Jerrine Jacob Mathews</p>
+            <p><strong data-i18n="contact.location">Location:</strong> Kornwestheim, DE</p>
+          </div>
+          <div>
+            <p><strong data-i18n="contact.email">Email:</strong> <a href="mailto:jerrine.jacob.mathews@outlook.com">jerrine.jacob.mathews@outlook.com</a></p>
+            <p><strong data-i18n="contact.github">GitHub:</strong> <a href="https://github.com/JerrineJacobMathews/" target="_blank" rel="noopener noreferrer">github.com/JerrineJacobMathews</a></p>
+          </div>
+        </div>
       </div>
     </section>
   </main>
@@ -311,10 +464,10 @@
   <footer class="site-footer">
     <div class="container footer-inner">
       <p>© <span id="year"></span> Jerrine Jacob Mathews</p>
-      <p class="footer-note" data-i18n="footer.note">Shared by direct link only.</p>
+      <p data-i18n="footer.note">Shared by direct link only.</p>
     </div>
   </footer>
 
-  <script src="assets/js/main.js?v=2"></script>
+  <script src="assets/js/main.js?v=3"></script>
 </body>
 </html>
