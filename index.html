@@ -29,10 +29,9 @@
 
       <nav class="main-nav" id="main-nav">
         <a href="#about" data-i18n="nav.about">About</a>
+        <a href="#projects" data-i18n="nav.projects">Projects</a>
         <a href="#experience" data-i18n="nav.experience">Experience</a>
         <a href="#education" data-i18n="nav.education">Education</a>
-        <a href="#expertise" data-i18n="nav.expertise">Expertise</a>
-        <a href="#projects" data-i18n="nav.projects">Projects</a>
         <a href="#research" data-i18n="nav.research">Research</a>
         <a href="#publications" data-i18n="nav.publications">Publications</a>
         <a href="#contact" data-i18n="nav.contact">Contact</a>
@@ -45,417 +44,437 @@
     </div>
   </header>
 
-  <main id="top">
-    <section class="hero-section section-pad">
-      <div class="container hero-grid reveal">
-        <div class="hero-copy">
-          <p class="section-kicker" data-i18n="hero.kicker">Personal Technical Portfolio</p>
-          <h1 data-i18n="hero.name">Jerrine Jacob Mathews</h1>
-          <p class="hero-subtitle" data-i18n="hero.subtitle">
-            Software Engineer | Sensor Systems | Industrial Monitoring | Applied Optics
-          </p>
-          <p class="hero-intro" data-i18n="hero.intro">
-            Engineer with interdisciplinary experience across industrial software, machine connectivity,
-            additive manufacturing, optics, sensing, diagnostics, and research-oriented technical development.
-          </p>
+  <main id="top" class="page-shell">
+    <section class="profile-header container reveal">
+      <div class="profile-banner">
+        <div class="profile-banner-overlay"></div>
+        <div class="profile-photo-wrap">
+          <div class="profile-photo placeholder-photo">JM</div>
+        </div>
+      </div>
 
-          <div class="hero-tags">
-            <span class="tag" data-i18n="hero.tag1">Industrial Software</span>
-            <span class="tag" data-i18n="hero.tag2">OPC UA</span>
-            <span class="tag" data-i18n="hero.tag3">Sensors & Optics</span>
-            <span class="tag" data-i18n="hero.tag4">Laser Manufacturing</span>
+      <div class="profile-header-card glass-card">
+        <div class="profile-header-main">
+          <div>
+            <p class="section-kicker" data-i18n="hero.kicker">Personal Technical Portfolio</p>
+            <h1 data-i18n="hero.name">Jerrine Jacob Mathews</h1>
+            <p class="profile-title" data-i18n="hero.subtitle">
+              Software Engineer | Sensor Systems | Industrial Monitoring | Applied Optics
+            </p>
+            <p class="profile-intro" data-i18n="hero.intro">
+              Engineer with interdisciplinary experience across industrial software, machine connectivity, additive manufacturing, optics, sensing, diagnostics, and research-oriented technical development.
+            </p>
+
+            <div class="hero-tags">
+              <span class="tag" data-i18n="hero.tag1">Industrial Software</span>
+              <span class="tag" data-i18n="hero.tag2">OPC UA</span>
+              <span class="tag" data-i18n="hero.tag3">Sensors & Optics</span>
+              <span class="tag" data-i18n="hero.tag4">Laser Manufacturing</span>
+            </div>
           </div>
 
-          <div class="hero-actions">
+          <div class="profile-actions">
             <a class="btn btn-primary" href="#projects" data-i18n="hero.btnProjects">View Projects</a>
             <a class="btn btn-secondary" href="#contact" data-i18n="hero.btnContact">Contact</a>
+            <a class="btn btn-secondary" href="https://github.com/JerrineJacobMathews/" target="_blank" rel="noopener noreferrer" data-i18n="hero.btnGitHub">GitHub</a>
           </div>
         </div>
+      </div>
+    </section>
 
-        <div class="hero-side">
-          <div class="glass-card focus-card">
-            <div class="focus-line"></div>
-            <h3 data-i18n="hero.focusTitle">Core Focus</h3>
-            <ul class="focus-list">
-              <li data-i18n="hero.focus1">Industrial software and machine-connected systems</li>
-              <li data-i18n="hero.focus2">Sensor-driven monitoring, diagnostics, and signal handling</li>
-              <li data-i18n="hero.focus3">Applied optics, technical prototyping, and engineering exploration</li>
-            </ul>
-          </div>
-
-          <div class="glass-card mini-stats">
-            <div class="mini-stat">
-              <span class="mini-label" data-i18n="hero.stat1Label">Domain</span>
-              <strong data-i18n="hero.stat1Value">Laser & Additive Manufacturing</strong>
+    <section class="container dashboard-layout">
+      <div class="dashboard-main">
+        <section id="about" class="dashboard-section reveal">
+          <div class="glass-card">
+            <div class="section-head">
+              <p class="section-kicker" data-i18n="about.kicker">Profile</p>
+              <h2 data-i18n="about.title">About</h2>
             </div>
-            <div class="mini-stat">
-              <span class="mini-label" data-i18n="hero.stat2Label">Profile</span>
-              <strong data-i18n="hero.stat2Value">Software + Systems + Research</strong>
+            <p data-i18n="about.p1">
+              I am an engineer with interdisciplinary experience across industrial software, machine systems, additive manufacturing, optics, sensing, embedded-oriented environments, and technical diagnostics.
+            </p>
+            <p data-i18n="about.p2">
+              My background combines practical work on complex production systems with academic specialization in microsystems engineering, optics, sensors, actuators, embedded systems, and system design.
+            </p>
+            <p data-i18n="about.p3">
+              I am particularly interested in software for machine-connected systems, industrial communication, structured signal acquisition, modular platform architecture, applied optics, and research-oriented technical development.
+            </p>
+          </div>
+        </section>
+
+        <section id="projects" class="dashboard-section reveal">
+          <div class="glass-card">
+            <div class="section-head">
+              <p class="section-kicker" data-i18n="projects.kicker">Selected Work</p>
+              <h2 data-i18n="projects.title">Flagship Projects</h2>
+              <p class="section-intro" data-i18n="projects.intro">
+                This portfolio currently highlights two flagship project directions: the broader Photonex platform and the Photonex Sensor Intelligence Suite, which represents its deeper analytical and research-oriented intelligence layer.
+              </p>
             </div>
-            <div class="mini-stat">
-              <span class="mini-label" data-i18n="hero.stat3Label">Location</span>
-              <strong>Kornwestheim, DE</strong>
+
+            <div class="expandable-project">
+              <div class="project-top">
+                <div class="project-image placeholder-project">
+                  <span>Photonex</span>
+                </div>
+                <div class="project-summary">
+                  <h3 data-i18n="projects.p1.title">Photonex</h3>
+                  <p data-i18n="projects.p1.desc">
+                    Photonex is the broader platform direction that brings together machine connectivity, diagnostics, monitoring architecture, sensor-informed workflows, and quality-oriented outputs into one structured engineering system.
+                  </p>
+                  <div class="project-pills">
+                    <span class="pill">Monitoring</span>
+                    <span class="pill">Diagnostics</span>
+                    <span class="pill">Connectivity</span>
+                    <span class="pill">Quality Passport</span>
+                  </div>
+                  <button class="expand-btn" data-expand-target="photonex-details" data-i18n="projects.expand">Expand Details</button>
+                </div>
+              </div>
+
+              <div class="expandable-content" id="photonex-details">
+                <div class="card-grid two-col">
+                  <article class="sub-card">
+                    <h4 data-i18n="projects.p1.d1t">Overview</h4>
+                    <p data-i18n="projects.p1.d1">
+                      Photonex is the umbrella platform direction in which machine communication, signal acquisition, diagnostics, monitoring visibility, and future intelligence layers can evolve together rather than as disconnected tools.
+                    </p>
+                  </article>
+
+                  <article class="sub-card">
+                    <h4 data-i18n="projects.p1.d2t">Core Platform Idea</h4>
+                    <ul>
+                      <li data-i18n="projects.p1.i1">Machine connectivity and structured signal acquisition</li>
+                      <li data-i18n="projects.p1.i2">Diagnostics and technical visibility</li>
+                      <li data-i18n="projects.p1.i3">Modular monitoring architecture</li>
+                      <li data-i18n="projects.p1.i4">Integration of sensor-driven modules</li>
+                      <li data-i18n="projects.p1.i5">Quality Passport as a major platform output direction</li>
+                    </ul>
+                  </article>
+
+                  <article class="sub-card">
+                    <h4 data-i18n="projects.p1.d3t">Quality Passport</h4>
+                    <p data-i18n="projects.p1.d3">
+                      The Quality Passport is a central part of Photonex. It represents the idea that monitoring and sensing should ultimately produce structured engineering outputs rather than only raw signal views.
+                    </p>
+                  </article>
+
+                  <article class="sub-card">
+                    <h4 data-i18n="projects.p1.d4t">Relation to SIS</h4>
+                    <p data-i18n="projects.p1.d4">
+                      Photonex is the broader platform, while the Photonex Sensor Intelligence Suite is the deeper technical intelligence layer behind sensing, validation, uncertainty-aware interpretation, and paper-linked development.
+                    </p>
+                  </article>
+                </div>
+              </div>
+            </div>
+
+            <div class="expandable-project">
+              <div class="project-top">
+                <div class="project-image placeholder-project alt">
+                  <span>Photonex SIS</span>
+                </div>
+                <div class="project-summary">
+                  <h3 data-i18n="projects.p2.title">Photonex Sensor Intelligence Suite</h3>
+                  <p data-i18n="projects.p2.desc">
+                    The Photonex Sensor Intelligence Suite is the deeper analytical and engineering core behind Photonex. It is structured around Production Mode and Engineering Mode to support both operational monitoring and deeper technical development.
+                  </p>
+                  <div class="project-pills">
+                    <span class="pill">Engineering Mode</span>
+                    <span class="pill">Production Mode</span>
+                    <span class="pill">Papers</span>
+                    <span class="pill">Validation</span>
+                  </div>
+                  <button class="expand-btn" data-expand-target="sis-details" data-i18n="projects.expand">Expand Details</button>
+                </div>
+              </div>
+
+              <div class="expandable-content" id="sis-details">
+                <div class="card-grid two-col">
+                  <article class="sub-card">
+                    <h4 data-i18n="projects.p2.d1t">Overview</h4>
+                    <p data-i18n="projects.p2.d1">
+                      The Sensor Intelligence Suite is the technical intelligence layer within the broader Photonex direction, where sensing concepts, signal interpretation, validation, uncertainty, and future intelligence modules are explored in a structured way.
+                    </p>
+                  </article>
+
+                  <article class="sub-card">
+                    <h4 data-i18n="projects.p2.d2t">Production Mode</h4>
+                    <p data-i18n="projects.p2.d2">
+                      Production Mode focuses on operational insight, simplified monitoring presentation, diagnostics-oriented visibility, and support for Quality Passport outputs in machine and process environments.
+                    </p>
+                  </article>
+
+                  <article class="sub-card">
+                    <h4 data-i18n="projects.p2.d3t">Engineering Mode</h4>
+                    <p data-i18n="projects.p2.d3">
+                      Engineering Mode focuses on deeper technical development including signal analysis, detectability studies, calibration logic, validation workflows, uncertainty-aware evaluation, simulation, and paper-linked engineering work.
+                    </p>
+                  </article>
+
+                  <article class="sub-card">
+                    <h4 data-i18n="projects.p2.d4t">Paper Connection</h4>
+                    <p data-i18n="projects.p2.d4">
+                      Planned paper directions are linked mainly to the Engineering Mode of the Sensor Intelligence Suite, including detectability, uncertainty-aware evaluation, calibration and validation logic, and quality-oriented technical intelligence concepts.
+                    </p>
+                  </article>
+                </div>
+              </div>
             </div>
           </div>
-        </div>
-      </div>
-    </section>
+        </section>
 
-    <section class="container focus-strip reveal">
-      <div class="focus-strip-grid">
-        <div class="focus-strip-card">
-          <span data-i18n="strip.label1">Current Direction</span>
-          <strong data-i18n="strip.value1">Industrial Monitoring & Diagnostics</strong>
-        </div>
-        <div class="focus-strip-card">
-          <span data-i18n="strip.label2">Core Technical Areas</span>
-          <strong data-i18n="strip.value2">Software, Sensor Systems, Optics, Connectivity</strong>
-        </div>
-        <div class="focus-strip-card">
-          <span data-i18n="strip.label3">Flagship Projects</span>
-          <strong data-i18n="strip.value3">Photonex + Photonex Sensor Intelligence Suite</strong>
-        </div>
-      </div>
-    </section>
-
-    <section id="about" class="container section-pad reveal">
-      <div class="section-head">
-        <p class="section-kicker" data-i18n="about.kicker">Profile</p>
-        <h2 data-i18n="about.title">About</h2>
-      </div>
-
-      <div class="glass-card content-card">
-        <p data-i18n="about.p1">
-          I am an engineer with interdisciplinary experience across industrial software, machine systems,
-          additive manufacturing, optics, sensing, embedded-oriented environments, and technical diagnostics.
-        </p>
-        <p data-i18n="about.p2">
-          My background combines practical work on complex production systems with academic specialization
-          in microsystems engineering, optics, sensors, actuators, embedded systems, and system design.
-        </p>
-        <p data-i18n="about.p3">
-          I am particularly interested in software for machine-connected systems, industrial communication,
-          structured signal acquisition, modular platform architecture, applied optics, and research-oriented
-          technical development.
-        </p>
-      </div>
-    </section>
-
-    <section id="experience" class="container section-pad reveal">
-      <div class="section-head">
-        <p class="section-kicker" data-i18n="experience.kicker">Professional Path</p>
-        <h2 data-i18n="experience.title">Work Experience</h2>
-      </div>
-
-      <div class="timeline">
-        <article class="timeline-item glass-card">
-          <div class="timeline-dot"></div>
-          <div class="timeline-meta">
-            <span data-i18n="experience.e1.period">Current / Recent</span>
-          </div>
-          <div class="timeline-body">
-            <h3 data-i18n="experience.e1.title">SCC Control / 2nd Level IT Support Service Engineer</h3>
-            <p class="timeline-company" data-i18n="experience.e1.company">Industrial laser manufacturing support environment</p>
-            <p data-i18n="experience.e1.desc">
-              Support and analysis of software- and system-related issues in laser-based manufacturing systems,
-              including OPC UA communication context, industrial network diagnostics, connected system behavior,
-              and customer-facing troubleshooting workflows.
-            </p>
-            <ul>
-              <li data-i18n="experience.e1.i1">Software and system issue analysis in machine environments</li>
-              <li data-i18n="experience.e1.i2">Industrial communication and network diagnostics</li>
-              <li data-i18n="experience.e1.i3">Support for machine-connected software behavior and troubleshooting</li>
-            </ul>
-          </div>
-        </article>
-
-        <article class="timeline-item glass-card">
-          <div class="timeline-dot"></div>
-          <div class="timeline-meta">
-            <span data-i18n="experience.e2.period">Previous Role</span>
-          </div>
-          <div class="timeline-body">
-            <h3 data-i18n="experience.e2.title">Additive Manufacturing Software Engineer</h3>
-            <p class="timeline-company" data-i18n="experience.e2.company">SLM / SLS systems and production environments</p>
-            <p data-i18n="experience.e2.desc">
-              Commissioning, upgrade, configuration, testing, and validation support for additive manufacturing systems,
-              with technical context across laser, scanner, motion, safety, and integrated machine subsystems.
-            </p>
-            <ul>
-              <li data-i18n="experience.e2.i1">Machine commissioning, upgrades, and validation support</li>
-              <li data-i18n="experience.e2.i2">Configuration and process-oriented system tests</li>
-              <li data-i18n="experience.e2.i3">Integration context across laser, scanner, motion, and safety subsystems</li>
-            </ul>
-          </div>
-        </article>
-
-        <article class="timeline-item glass-card">
-          <div class="timeline-dot"></div>
-          <div class="timeline-meta">
-            <span data-i18n="experience.e3.period">Research Role</span>
-          </div>
-          <div class="timeline-body">
-            <h3 data-i18n="experience.e3.title">Research Assistant</h3>
-            <p class="timeline-company" data-i18n="experience.e3.company">University optics / sensing / measurement context</p>
-            <p data-i18n="experience.e3.desc">
-              Development of a miniaturized optical measurement head with signal processing for grinding burn detection,
-              together with comparative sensing, technical experiments, and automated test setup work.
-            </p>
-            <ul>
-              <li data-i18n="experience.e3.i1">Optical measurement head development</li>
-              <li data-i18n="experience.e3.i2">Signal processing and sensor comparison work</li>
-              <li data-i18n="experience.e3.i3">Automated test setup and technical evaluation support</li>
-            </ul>
-          </div>
-        </article>
-      </div>
-    </section>
-
-    <section id="education" class="container section-pad reveal">
-      <div class="section-head">
-        <p class="section-kicker" data-i18n="education.kicker">Academic Foundation</p>
-        <h2 data-i18n="education.title">Education</h2>
-      </div>
-
-      <div class="card-grid three-col">
-        <article class="glass-card edu-card">
-          <h3 data-i18n="education.msc.title">M.Sc. Microsystems Engineering</h3>
-          <p class="edu-sub" data-i18n="education.msc.sub">Advanced interdisciplinary engineering focus</p>
-          <ul>
-            <li data-i18n="education.msc.i1">Optics, sensors, and actuators</li>
-            <li data-i18n="education.msc.i2">Embedded systems and microsystems design</li>
-            <li data-i18n="education.msc.i3">Technical system integration and applied engineering analysis</li>
-          </ul>
-        </article>
-
-        <article class="glass-card edu-card">
-          <h3 data-i18n="education.bme.title">B.Sc. Mechatronics</h3>
-          <p class="edu-sub" data-i18n="education.bme.sub">Mechanical, electrical, and software-oriented engineering base</p>
-          <ul>
-            <li data-i18n="education.bme.i1">System-level technical thinking</li>
-            <li data-i18n="education.bme.i2">Controls, machine-related engineering, and integration mindset</li>
-            <li data-i18n="education.bme.i3">Interfacing between hardware and software domains</li>
-          </ul>
-        </article>
-
-        <article class="glass-card edu-card">
-          <h3 data-i18n="education.bca.title">B.Sc. Computer Applications</h3>
-          <p class="edu-sub" data-i18n="education.bca.sub">Software and analytical computing foundation</p>
-          <ul>
-            <li data-i18n="education.bca.i1">Programming and software fundamentals</li>
-            <li data-i18n="education.bca.i2">Analytical problem solving and software logic</li>
-            <li data-i18n="education.bca.i3">Complementary base for engineering software development</li>
-          </ul>
-        </article>
-      </div>
-    </section>
-
-    <section id="expertise" class="container section-pad reveal">
-      <div class="section-head">
-        <p class="section-kicker" data-i18n="expertise.kicker">Capabilities</p>
-        <h2 data-i18n="expertise.title">Core Expertise</h2>
-      </div>
-
-      <div class="card-grid two-col">
-        <article class="glass-card skill-card">
-          <h3 data-i18n="expertise.s1.title">Software Development</h3>
-          <ul>
-            <li data-i18n="expertise.s1.i1">C, C++, C#, Python, Lua</li>
-            <li data-i18n="expertise.s1.i2">WPF and desktop-oriented development</li>
-            <li data-i18n="expertise.s1.i3">Modular architecture and technical tooling</li>
-            <li data-i18n="expertise.s1.i4">Diagnostics, logging, and engineering workflows</li>
-          </ul>
-        </article>
-
-        <article class="glass-card skill-card">
-          <h3 data-i18n="expertise.s2.title">Industrial & Machine Systems</h3>
-          <ul>
-            <li data-i18n="expertise.s2.i1">OPC UA, CAN, Modbus TCP/IP</li>
-            <li data-i18n="expertise.s2.i2">IPC–PLC troubleshooting</li>
-            <li data-i18n="expertise.s2.i3">Machine integration and upgrade context</li>
-            <li data-i18n="expertise.s2.i4">Industrial network and system diagnostics</li>
-          </ul>
-        </article>
-
-        <article class="glass-card skill-card">
-          <h3 data-i18n="expertise.s3.title">Sensors, Optics & Analysis</h3>
-          <ul>
-            <li data-i18n="expertise.s3.i1">Optical measurement concepts</li>
-            <li data-i18n="expertise.s3.i2">Sensor-oriented technical work</li>
-            <li data-i18n="expertise.s3.i3">Signal handling and monitoring concepts</li>
-            <li data-i18n="expertise.s3.i4">Applied optics and microsystems background</li>
-          </ul>
-        </article>
-
-        <article class="glass-card skill-card">
-          <h3 data-i18n="expertise.s4.title">Engineering Workflow</h3>
-          <ul>
-            <li data-i18n="expertise.s4.i1">Technical documentation</li>
-            <li data-i18n="expertise.s4.i2">Prototype development and concept validation</li>
-            <li data-i18n="expertise.s4.i3">Interdisciplinary problem solving</li>
-            <li data-i18n="expertise.s4.i4">Research-oriented technical exploration</li>
-          </ul>
-        </article>
-      </div>
-    </section>
-
-    <section id="projects" class="container section-pad reveal">
-      <div class="section-head">
-        <p class="section-kicker" data-i18n="projects.kicker">Selected Work</p>
-        <h2 data-i18n="projects.title">Flagship Projects</h2>
-        <p class="section-intro" data-i18n="projects.intro">
-          This portfolio currently highlights two flagship project directions: the broader Photonex platform and the Photonex Sensor Intelligence Suite, which represents its deeper analytical and research-oriented intelligence layer.
-        </p>
-      </div>
-
-      <div class="project-stack">
-        <article class="glass-card project project-featured">
-          <div class="project-visual">
-            <div class="project-visual-label">Photonex</div>
-          </div>
-          <div class="project-content">
-            <h3 data-i18n="projects.p1.title">Photonex</h3>
-            <p data-i18n="projects.p1.desc">
-              Photonex is the broader platform direction that brings together machine connectivity, diagnostics, monitoring architecture, sensor-informed workflows, and quality-oriented outputs into one structured engineering system.
-            </p>
-            <div class="project-pills">
-              <span class="pill">Monitoring</span>
-              <span class="pill">Diagnostics</span>
-              <span class="pill">Connectivity</span>
-              <span class="pill">Quality Passport</span>
+        <section id="experience" class="dashboard-section reveal">
+          <div class="glass-card">
+            <div class="section-head">
+              <p class="section-kicker" data-i18n="experience.kicker">Professional Path</p>
+              <h2 data-i18n="experience.title">Work Experience</h2>
             </div>
-            <ul>
-              <li data-i18n="projects.p1.i1">Machine connectivity and structured signal acquisition</li>
-              <li data-i18n="projects.p1.i2">Diagnostics and technical visibility</li>
-              <li data-i18n="projects.p1.i3">Modular monitoring architecture</li>
-              <li data-i18n="projects.p1.i4">Integration of sensor-driven modules</li>
-              <li data-i18n="projects.p1.i5">Quality Passport as a major platform output direction</li>
-            </ul>
-            <a class="project-link" href="projects/photonex.html" data-i18n="projects.p1.link">View details about Photonex →</a>
-          </div>
-        </article>
 
-        <article class="glass-card project">
-          <div class="project-content">
-            <h3 data-i18n="projects.p2.title">Photonex Sensor Intelligence Suite</h3>
-            <p data-i18n="projects.p2.desc">
-              The Photonex Sensor Intelligence Suite is the deeper analytical and engineering core behind Photonex. It is structured around Production Mode and Engineering Mode to support both operational monitoring and deeper technical development.
-            </p>
-            <div class="project-pills">
-              <span class="pill">Engineering Mode</span>
-              <span class="pill">Production Mode</span>
-              <span class="pill">Papers</span>
-              <span class="pill">Validation</span>
+            <div class="experience-list">
+              <article class="experience-card">
+                <div class="entity-logo placeholder-logo">T</div>
+                <div class="entity-content">
+                  <h3 data-i18n="experience.e1.title">SCC Control / 2nd Level IT Support Service Engineer</h3>
+                  <p class="entity-name" data-i18n="experience.e1.company">Industrial laser manufacturing support environment</p>
+                  <p data-i18n="experience.e1.desc">
+                    Support and analysis of software- and system-related issues in laser-based manufacturing systems, including OPC UA communication context, industrial network diagnostics, connected system behavior, and customer-facing troubleshooting workflows.
+                  </p>
+                  <ul>
+                    <li data-i18n="experience.e1.i1">Software and system issue analysis in machine environments</li>
+                    <li data-i18n="experience.e1.i2">Industrial communication and network diagnostics</li>
+                    <li data-i18n="experience.e1.i3">Support for machine-connected software behavior and troubleshooting</li>
+                  </ul>
+                </div>
+              </article>
+
+              <article class="experience-card">
+                <div class="entity-logo placeholder-logo">A</div>
+                <div class="entity-content">
+                  <h3 data-i18n="experience.e2.title">Additive Manufacturing Software Engineer</h3>
+                  <p class="entity-name" data-i18n="experience.e2.company">SLM / SLS systems and production environments</p>
+                  <p data-i18n="experience.e2.desc">
+                    Commissioning, upgrade, configuration, testing, and validation support for additive manufacturing systems, with technical context across laser, scanner, motion, safety, and integrated machine subsystems.
+                  </p>
+                  <ul>
+                    <li data-i18n="experience.e2.i1">Machine commissioning, upgrades, and validation support</li>
+                    <li data-i18n="experience.e2.i2">Configuration and process-oriented system tests</li>
+                    <li data-i18n="experience.e2.i3">Integration context across laser, scanner, motion, and safety subsystems</li>
+                  </ul>
+                </div>
+              </article>
+
+              <article class="experience-card">
+                <div class="entity-logo placeholder-logo">U</div>
+                <div class="entity-content">
+                  <h3 data-i18n="experience.e3.title">Research Assistant</h3>
+                  <p class="entity-name" data-i18n="experience.e3.company">University optics / sensing / measurement context</p>
+                  <p data-i18n="experience.e3.desc">
+                    Development of a miniaturized optical measurement head with signal processing for grinding burn detection, together with comparative sensing, technical experiments, and automated test setup work.
+                  </p>
+                  <ul>
+                    <li data-i18n="experience.e3.i1">Optical measurement head development</li>
+                    <li data-i18n="experience.e3.i2">Signal processing and sensor comparison work</li>
+                    <li data-i18n="experience.e3.i3">Automated test setup and technical evaluation support</li>
+                  </ul>
+                </div>
+              </article>
             </div>
-            <ul>
-              <li data-i18n="projects.p2.i1">Sensor-driven monitoring concepts</li>
-              <li data-i18n="projects.p2.i2">Signal interpretation and detectability logic</li>
-              <li data-i18n="projects.p2.i3">Uncertainty-aware evaluation</li>
-              <li data-i18n="projects.p2.i4">Calibration and validation thinking</li>
-              <li data-i18n="projects.p2.i5">Paper-linked engineering frameworks</li>
-              <li data-i18n="projects.p2.i6">Support for Quality Passport generation</li>
-            </ul>
-            <a class="project-link" href="projects/photonex-sensor-intelligence-suite.html" data-i18n="projects.p2.link">View details about the Sensor Intelligence Suite →</a>
           </div>
-        </article>
-      </div>
-    </section>
+        </section>
 
-    <section id="research" class="container section-pad reveal">
-      <div class="section-head">
-        <p class="section-kicker" data-i18n="research.kicker">Exploration</p>
-        <h2 data-i18n="research.title">Research, Papers & Technical Exploration</h2>
-        <p class="section-intro" data-i18n="research.intro">
-          The research-oriented direction of this portfolio is centered primarily around the Photonex Sensor Intelligence Suite, especially its Engineering Mode.
-        </p>
-      </div>
+        <section id="education" class="dashboard-section reveal">
+          <div class="glass-card">
+            <div class="section-head">
+              <p class="section-kicker" data-i18n="education.kicker">Academic Foundation</p>
+              <h2 data-i18n="education.title">Education</h2>
+            </div>
 
-      <div class="card-grid two-col">
-        <article class="glass-card">
-          <h3 data-i18n="research.r1.title">Signal Detectability & Monitoring Logic</h3>
-          <p data-i18n="research.r1.text">
-            Exploration of how sensor signals can be interpreted, distinguished from noise, and translated into useful engineering information for monitoring-oriented systems.
-          </p>
-        </article>
+            <div class="education-list">
+              <article class="education-card">
+                <div class="entity-logo placeholder-logo">H</div>
+                <div class="entity-content">
+                  <h3 data-i18n="education.msc.title">M.Sc. Microsystems Engineering</h3>
+                  <p class="entity-name" data-i18n="education.msc.sub">Advanced interdisciplinary engineering focus</p>
+                  <ul>
+                    <li data-i18n="education.msc.i1">Optics, sensors, and actuators</li>
+                    <li data-i18n="education.msc.i2">Embedded systems and microsystems design</li>
+                    <li data-i18n="education.msc.i3">Technical system integration and applied engineering analysis</li>
+                  </ul>
+                </div>
+              </article>
 
-        <article class="glass-card">
-          <h3 data-i18n="research.r2.title">Uncertainty-Aware Evaluation</h3>
-          <p data-i18n="research.r2.text">
-            Development of technical approaches for evaluating sensing reliability, interpretability, and engineering confidence in measured or derived signals.
-          </p>
-        </article>
+              <article class="education-card">
+                <div class="entity-logo placeholder-logo">M</div>
+                <div class="entity-content">
+                  <h3 data-i18n="education.bme.title">B.Sc. Mechatronics</h3>
+                  <p class="entity-name" data-i18n="education.bme.sub">Mechanical, electrical, and software-oriented engineering base</p>
+                  <ul>
+                    <li data-i18n="education.bme.i1">System-level technical thinking</li>
+                    <li data-i18n="education.bme.i2">Controls, machine-related engineering, and integration mindset</li>
+                    <li data-i18n="education.bme.i3">Interfacing between hardware and software domains</li>
+                  </ul>
+                </div>
+              </article>
 
-        <article class="glass-card">
-          <h3 data-i18n="research.r3.title">Calibration, Validation & Sensor Development</h3>
-          <p data-i18n="research.r3.text">
-            Engineering-oriented work on how sensing concepts can be checked, calibrated, validated, and made more reliable before being used in operational workflows.
-          </p>
-        </article>
-
-        <article class="glass-card">
-          <h3 data-i18n="research.r4.title">Paper-Linked Technical Development</h3>
-          <p data-i18n="research.r4.text">
-            A research path in which simulations, engineering modules, and paper topics are developed together, mainly within the Engineering Mode of the Photonex Sensor Intelligence Suite.
-          </p>
-        </article>
-      </div>
-    </section>
-
-    <section id="publications" class="container section-pad reveal">
-      <div class="section-head">
-        <p class="section-kicker" data-i18n="publications.kicker">Academic Context</p>
-        <h2 data-i18n="publications.title">Publications & Research Contributions</h2>
-      </div>
-
-      <div class="card-grid two-col">
-        <article class="glass-card">
-          <h3 data-i18n="publications.f.title">Formal Publications</h3>
-          <p data-i18n="publications.f.text">
-            Formal publications, theses, credited technical reports, and future journal or conference contributions will be listed here.
-          </p>
-        </article>
-
-        <article class="glass-card">
-          <h3 data-i18n="publications.c.title">Research Contributions</h3>
-          <p data-i18n="publications.c.text">
-            This section will also distinguish technical contributions, laboratory support work, implementation support, and indirect project-related research contributions where formal authorship is not claimed.
-          </p>
-        </article>
-
-        <article class="glass-card">
-          <h3 data-i18n="publications.p.title">Paper Direction</h3>
-          <p data-i18n="publications.p.text">
-            Planned paper directions are linked primarily to the Engineering Mode of the Photonex Sensor Intelligence Suite. These topics include signal detectability, uncertainty-aware evaluation, sensing frameworks, calibration and validation logic, and future quality-oriented technical intelligence structures.
-          </p>
-        </article>
-
-        <article class="glass-card">
-          <h3 data-i18n="publications.n.title">Professional Note</h3>
-          <p data-i18n="publications.n.text">
-            Publications and contributions should always be presented with a clear distinction between formal authorship, credited work, and indirect technical contribution.
-          </p>
-        </article>
-      </div>
-    </section>
-
-    <section id="contact" class="container section-pad reveal">
-      <div class="section-head">
-        <p class="section-kicker" data-i18n="contact.kicker">Get in Touch</p>
-        <h2 data-i18n="contact.title">Contact</h2>
-      </div>
-
-      <div class="glass-card contact-card">
-        <div class="contact-grid">
-          <div>
-            <p><strong data-i18n="contact.name">Name:</strong> Jerrine Jacob Mathews</p>
-            <p><strong data-i18n="contact.location">Location:</strong> Kornwestheim, DE</p>
+              <article class="education-card">
+                <div class="entity-logo placeholder-logo">C</div>
+                <div class="entity-content">
+                  <h3 data-i18n="education.bca.title">B.Sc. Computer Applications</h3>
+                  <p class="entity-name" data-i18n="education.bca.sub">Software and analytical computing foundation</p>
+                  <ul>
+                    <li data-i18n="education.bca.i1">Programming and software fundamentals</li>
+                    <li data-i18n="education.bca.i2">Analytical problem solving and software logic</li>
+                    <li data-i18n="education.bca.i3">Complementary base for engineering software development</li>
+                  </ul>
+                </div>
+              </article>
+            </div>
           </div>
-          <div>
-            <p><strong data-i18n="contact.email">Email:</strong> <a href="mailto:jerrine.jacob.mathews@outlook.com">jerrine.jacob.mathews@outlook.com</a></p>
-            <p><strong data-i18n="contact.github">GitHub:</strong> <a href="https://github.com/JerrineJacobMathews/" target="_blank" rel="noopener noreferrer">github.com/JerrineJacobMathews</a></p>
+        </section>
+
+        <section id="research" class="dashboard-section reveal">
+          <div class="glass-card">
+            <div class="section-head">
+              <p class="section-kicker" data-i18n="research.kicker">Exploration</p>
+              <h2 data-i18n="research.title">Research, Papers & Technical Exploration</h2>
+              <p class="section-intro" data-i18n="research.intro">
+                The research-oriented direction of this portfolio is centered primarily around the Photonex Sensor Intelligence Suite, especially its Engineering Mode.
+              </p>
+            </div>
+
+            <div class="card-grid two-col">
+              <article class="sub-card">
+                <h4 data-i18n="research.r1.title">Signal Detectability & Monitoring Logic</h4>
+                <p data-i18n="research.r1.text">
+                  Exploration of how sensor signals can be interpreted, distinguished from noise, and translated into useful engineering information for monitoring-oriented systems.
+                </p>
+              </article>
+
+              <article class="sub-card">
+                <h4 data-i18n="research.r2.title">Uncertainty-Aware Evaluation</h4>
+                <p data-i18n="research.r2.text">
+                  Development of technical approaches for evaluating sensing reliability, interpretability, and engineering confidence in measured or derived signals.
+                </p>
+              </article>
+
+              <article class="sub-card">
+                <h4 data-i18n="research.r3.title">Calibration, Validation & Sensor Development</h4>
+                <p data-i18n="research.r3.text">
+                  Engineering-oriented work on how sensing concepts can be checked, calibrated, validated, and made more reliable before being used in operational workflows.
+                </p>
+              </article>
+
+              <article class="sub-card">
+                <h4 data-i18n="research.r4.title">Paper-Linked Technical Development</h4>
+                <p data-i18n="research.r4.text">
+                  A research path in which simulations, engineering modules, and paper topics are developed together, mainly within the Engineering Mode of the Photonex Sensor Intelligence Suite.
+                </p>
+              </article>
+            </div>
           </div>
-        </div>
+        </section>
+
+        <section id="publications" class="dashboard-section reveal">
+          <div class="glass-card">
+            <div class="section-head">
+              <p class="section-kicker" data-i18n="publications.kicker">Academic Context</p>
+              <h2 data-i18n="publications.title">Publications & Research Contributions</h2>
+            </div>
+
+            <div class="card-grid two-col">
+              <article class="sub-card">
+                <h4 data-i18n="publications.f.title">Formal Publications</h4>
+                <p data-i18n="publications.f.text">
+                  Formal publications, theses, credited technical reports, and future journal or conference contributions will be listed here.
+                </p>
+              </article>
+
+              <article class="sub-card">
+                <h4 data-i18n="publications.c.title">Research Contributions</h4>
+                <p data-i18n="publications.c.text">
+                  This section will also distinguish technical contributions, laboratory support work, implementation support, and indirect project-related research contributions where formal authorship is not claimed.
+                </p>
+              </article>
+
+              <article class="sub-card">
+                <h4 data-i18n="publications.p.title">Paper Direction</h4>
+                <p data-i18n="publications.p.text">
+                  Planned paper directions are linked primarily to the Engineering Mode of the Photonex Sensor Intelligence Suite. These topics include signal detectability, uncertainty-aware evaluation, sensing frameworks, calibration and validation logic, and future quality-oriented technical intelligence structures.
+                </p>
+              </article>
+
+              <article class="sub-card">
+                <h4 data-i18n="publications.n.title">Professional Note</h4>
+                <p data-i18n="publications.n.text">
+                  Publications and contributions should always be presented with a clear distinction between formal authorship, credited work, and indirect technical contribution.
+                </p>
+              </article>
+            </div>
+          </div>
+        </section>
+
+        <section id="contact" class="dashboard-section reveal">
+          <div class="glass-card">
+            <div class="section-head">
+              <p class="section-kicker" data-i18n="contact.kicker">Get in Touch</p>
+              <h2 data-i18n="contact.title">Contact</h2>
+            </div>
+
+            <div class="contact-grid">
+              <div>
+                <p><strong data-i18n="contact.name">Name:</strong> Jerrine Jacob Mathews</p>
+                <p><strong data-i18n="contact.location">Location:</strong> Kornwestheim, DE</p>
+              </div>
+              <div>
+                <p><strong data-i18n="contact.email">Email:</strong> <a href="mailto:jerrine.jacob.mathews@outlook.com">jerrine.jacob.mathews@outlook.com</a></p>
+                <p><strong data-i18n="contact.github">GitHub:</strong> <a href="https://github.com/JerrineJacobMathews/" target="_blank" rel="noopener noreferrer">github.com/JerrineJacobMathews</a></p>
+              </div>
+            </div>
+          </div>
+        </section>
       </div>
+
+      <aside class="dashboard-sidebar">
+        <section class="glass-card sidebar-card reveal">
+          <h3 data-i18n="sidebar.quick">Quick Facts</h3>
+          <ul class="sidebar-list">
+            <li data-i18n="sidebar.q1">Software + Systems + Research profile</li>
+            <li data-i18n="sidebar.q2">Laser & Additive Manufacturing domain</li>
+            <li data-i18n="sidebar.q3">OPC UA, diagnostics, and machine connectivity</li>
+            <li data-i18n="sidebar.q4">Applied optics and sensing background</li>
+          </ul>
+        </section>
+
+        <section class="glass-card sidebar-card reveal">
+          <h3 data-i18n="sidebar.focus">Current Focus</h3>
+          <div class="sidebar-tags">
+            <span class="tag">Photonex</span>
+            <span class="tag">Sensor Intelligence</span>
+            <span class="tag">Quality Passport</span>
+            <span class="tag">Engineering Mode</span>
+            <span class="tag">Production Mode</span>
+          </div>
+        </section>
+
+        <section class="glass-card sidebar-card reveal">
+          <h3 data-i18n="sidebar.stack">Core Stack</h3>
+          <ul class="sidebar-list">
+            <li>C, C++, C#, Python, Lua</li>
+            <li>WPF / Desktop Development</li>
+            <li>OPC UA, CAN, Modbus TCP/IP</li>
+            <li>Diagnostics, Logging, Monitoring</li>
+          </ul>
+        </section>
+
+        <section class="glass-card sidebar-card reveal">
+          <h3 data-i18n="sidebar.links">Profile Links</h3>
+          <div class="sidebar-actions">
+            <a class="btn btn-secondary btn-small" href="https://github.com/JerrineJacobMathews/" target="_blank" rel="noopener noreferrer">GitHub</a>
+            <a class="btn btn-secondary btn-small" href="#contact" data-i18n="sidebar.contactBtn">Contact</a>
+          </div>
+        </section>
+      </aside>
     </section>
   </main>
 
@@ -466,6 +485,6 @@
     </div>
   </footer>
 
-  <script src="assets/js/main.js?v=4"></script>
+  <script src="assets/js/main.js?v=5"></script>
 </body>
 </html>
