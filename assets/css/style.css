@@ -84,6 +84,10 @@ a {
   padding: 42px 0 56px;
 }
 
+.section-gap-sm {
+  margin-top: 20px;
+}
+
 .site-header {
   position: sticky;
   top: 0;
@@ -293,7 +297,8 @@ a {
 .skill-card ul,
 .edu-card ul,
 .project ul,
-.timeline-item ul {
+.timeline-item ul,
+.feature-list {
   padding-left: 18px;
   color: var(--muted);
 }
@@ -347,7 +352,12 @@ a {
   font-size: 2rem;
 }
 
-.content-card p {
+.section-intro,
+.content-card p,
+.project-content p,
+.contact-card p,
+.timeline-item p,
+.glass-card p {
   color: var(--muted);
 }
 
@@ -362,6 +372,10 @@ a {
 
 .card-grid.three-col {
   grid-template-columns: repeat(3, 1fr);
+}
+
+.two-col-span {
+  grid-column: span 2;
 }
 
 .edu-sub,
@@ -459,48 +473,11 @@ a {
   font-weight: 700;
 }
 
-.project-content p {
-  color: var(--muted);
-}
-
-.tabs {
-  display: grid;
-  gap: 18px;
-}
-
-.tab-buttons {
-  display: flex;
-  gap: 10px;
-  flex-wrap: wrap;
-}
-
-.tab-btn {
-  border: 1px solid var(--line);
-  background: rgba(255,255,255,0.03);
-  color: var(--muted);
-  border-radius: 999px;
-  padding: 10px 14px;
-  cursor: pointer;
-  transition: 0.2s ease;
-}
-
-.tab-btn.active,
-.tab-btn:hover {
-  color: white;
-  background: rgba(79, 140, 255, 0.18);
-  border-color: rgba(79, 140, 255, 0.46);
-}
-
-.tab-panel {
-  display: none;
-}
-
-.tab-panel.active {
-  display: block;
-}
-
-.contact-card p {
-  color: var(--muted);
+.project-link {
+  display: inline-block;
+  margin-top: 12px;
+  text-decoration: none;
+  font-weight: 700;
 }
 
 .contact-grid {
@@ -547,6 +524,10 @@ a {
   .focus-strip-grid,
   .contact-grid {
     grid-template-columns: 1fr;
+  }
+
+  .two-col-span {
+    grid-column: span 1;
   }
 
   .footer-inner {
