@@ -164,36 +164,29 @@ a {
 }
 
 .profile-banner {
-  height: 210px;
+  height: 230px;
   border-radius: 28px 28px 0 0;
   position: relative;
   overflow: hidden;
-  background:
-    linear-gradient(135deg, rgba(31,163,163,0.28), rgba(9,27,31,0.78)),
-    linear-gradient(180deg, #12313a, #0a1c20);
   border: 1px solid var(--line);
   border-bottom: none;
+  background: linear-gradient(135deg, rgba(31,163,163,0.20), rgba(9,27,31,0.78));
 }
 
-.profile-banner::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background:
-    linear-gradient(90deg, transparent, rgba(255,255,255,0.06), transparent),
-    repeating-linear-gradient(
-      135deg,
-      rgba(255,255,255,0.018) 0 16px,
-      transparent 16px 32px
-    );
+.profile-banner-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
 }
 
 .profile-banner-overlay {
   position: absolute;
   inset: 0;
   background:
-    radial-gradient(circle at 22% 38%, rgba(95,208,200,0.16), transparent 22%),
-    radial-gradient(circle at 72% 28%, rgba(31,163,163,0.14), transparent 20%);
+    linear-gradient(180deg, rgba(6,19,22,0.15), rgba(6,19,22,0.45)),
+    radial-gradient(circle at 22% 38%, rgba(95,208,200,0.10), transparent 22%),
+    radial-gradient(circle at 72% 28%, rgba(31,163,163,0.10), transparent 20%);
 }
 
 .profile-photo-wrap {
@@ -210,16 +203,7 @@ a {
   border: 5px solid #08181c;
   box-shadow: var(--shadow);
   object-fit: cover;
-}
-
-.placeholder-photo {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: linear-gradient(135deg, var(--primary), var(--primary-2));
-  color: white;
-  font-size: 2rem;
-  font-weight: 800;
+  background: #0b1f24;
 }
 
 .profile-header-card {
