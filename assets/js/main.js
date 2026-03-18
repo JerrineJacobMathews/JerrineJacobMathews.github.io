@@ -304,6 +304,22 @@ function setLanguage(lang) {
   document.querySelectorAll(".lang-btn").forEach((btn) => btn.classList.remove("active"));
   const activeBtn = document.getElementById(`lang-${lang}`);
   if (activeBtn) activeBtn.classList.add("active");
+
+  updateExpandButtonTexts(lang);
+}
+
+function updateExpandButtonTexts(lang) {
+  const buttons = document.querySelectorAll(".expand-btn");
+
+  buttons.forEach((btn) => {
+    const targetId = btn.dataset.expandTarget;
+    const target = document.getElementById(targetId);
+    if (!target) return;
+
+    btn.textContent = target.classList.contains("open")
+      ? translations[lang]["projects.collapse"]
+      : translations[lang]["projects.expand"];
+  });
 }
 
 function initReveal() {
@@ -347,13 +363,12 @@ function initExpandables() {
       const target = document.getElementById(targetId);
       if (!target) return;
 
-      const isOpen = target.classList.contains("open");
       target.classList.toggle("open");
 
       const lang = localStorage.getItem("language") || "en";
-      btn.textContent = isOpen
-        ? translations[lang]["projects.expand"]
-        : translations[lang]["projects.collapse"];
+      btn.textContent = target.classList.contains("open")
+        ? translations[lang]["projects.collapse"]
+        : translations[lang]["projects.expand"];
     });
   });
 }
