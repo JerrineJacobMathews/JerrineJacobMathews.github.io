@@ -22,9 +22,9 @@ This folder contains the Cloudflare Worker code for the portfolio visitor counte
 7. Deploy the Worker.
 8. Copy your Worker URL, for example:
    `https://portfolio-counter.YOURNAME.workers.dev/visit`
-9. Open `content/portfolio-content.json` and replace:
+9. Open `assets/js/visitor-counter.js` and replace:
    `https://YOUR-WORKER-URL.workers.dev/visit`
-   with your real Worker URL.
+   with your real Worker `/visit` URL.
 
 ## Test
 

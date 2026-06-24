@@ -1,48 +1,45 @@
 (function () {
-  const FALLBACK_BASELINE = 350;
+  // Edit these two values directly in code.
+  // Keep the placeholder URL until your Cloudflare Worker is created.
+  const VISITOR_API_URL = "https://YOUR-WORKER-URL.workers.dev/visit";
+  const BASELINE_COUNT = 350;
   const STORAGE_KEY = "jerrine_portfolio_unique_visit_v1";
+
   const countEl = document.getElementById("visitor-count");
 
   function setCount(value) {
     if (!countEl) return;
     const number = Number(value);
-    countEl.textContent = Number.isFinite(number) ? number.toLocaleString() : FALLBACK_BASELINE.toLocaleString();
-  }
-
-  async function loadCounterConfig() {
-    try {
-      const response = await fetch("content/portfolio-content.json", { cache: "no-store" });
-      if (!response.ok) throw new Error("No config");
-      const content = await response.json();
-      return content?.settings || {};
-    } catch {
-      return {};
-    }
+    countEl.textContent = Number.isFinite(number)
+      ? number.toLocaleString()
+      : BASELINE_COUNT.toLocaleString();
   }
 
   async function initVisitorCounter() {
-    const settings = await loadCounterConfig();
-    const apiUrl = settings.visitorApiUrl || "";
-    const baseline = Number(settings.visitorBaseline || FALLBACK_BASELINE);
     const alreadyCounted = localStorage.getItem(STORAGE_KEY) === "true";
 
-    setCount(baseline);
+    setCount(BASELINE_COUNT);
 
-    if (!apiUrl || apiUrl.includes("YOUR-WORKER")) {
+    if (!VISITOR_API_URL || VISITOR_API_URL.includes("YOUR-WORKER")) {
       return;
     }
 
     try {
-      const response = await fetch(apiUrl, {
+      const response = await fetch(VISITOR_API_URL, {
         method: alreadyCounted ? "GET" : "POST",
         headers: { "Content-Type": "application/json" }
       });
+
       if (!response.ok) throw new Error("Counter unavailable");
+
       const data = await response.json();
-      setCount(data.count ?? baseline);
-      if (!alreadyCounted) localStorage.setItem(STORAGE_KEY, "true");
+      setCount(data.count ?? BASELINE_COUNT);
+
+      if (!alreadyCounted) {
+        localStorage.setItem(STORAGE_KEY, "true");
+      }
     } catch {
-      setCount(baseline);
+      setCount(BASELINE_COUNT);
     }
   }
 
