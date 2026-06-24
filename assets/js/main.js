@@ -391,23 +391,3 @@ document.addEventListener("DOMContentLoaded", () => {
   initExpandables();
 });
 
-function hidePortfolioLoader() {
-  const loader = document.getElementById("portfolio-loader");
-  if (!loader) return;
-  const startedAt = Number(loader.dataset.startedAt || Date.now());
-  const minimumMs = 950;
-  const elapsed = Date.now() - startedAt;
-  const delay = Math.max(0, minimumMs - elapsed);
-  window.setTimeout(() => {
-    loader.classList.add("is-hidden");
-    window.setTimeout(() => loader.remove(), 650);
-  }, delay);
-}
-
-document.addEventListener("DOMContentLoaded", () => {
-  const loader = document.getElementById("portfolio-loader");
-  if (loader) loader.dataset.startedAt = String(Date.now());
-});
-
-window.addEventListener("load", hidePortfolioLoader);
-window.setTimeout(hidePortfolioLoader, 3200);
