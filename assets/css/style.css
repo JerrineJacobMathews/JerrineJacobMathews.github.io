@@ -675,3 +675,101 @@ a {
 just think overall . can more improvements be brought? or is it enough. you can also check the page live if needed. tell suggestions.  
 Also if you are suggesting something from web, check it. 
 Don't rewrite code yet. just think overall.
+
+/* Recruiter/CMS additions */
+.recruiter-strip {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 10px;
+  margin-top: 18px;
+}
+.recruiter-stat {
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  background: rgba(255,255,255,0.035);
+  padding: 12px 14px;
+}
+.recruiter-stat strong {
+  display: block;
+  color: var(--text);
+  font-size: 0.98rem;
+  line-height: 1.25;
+}
+.recruiter-stat span {
+  color: var(--muted);
+  font-size: 0.84rem;
+}
+.cms-project-list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+  margin: 22px 0;
+}
+.cms-project-card {
+  border: 1px solid var(--line);
+  border-radius: 20px;
+  background: rgba(255,255,255,0.035);
+  overflow: hidden;
+}
+.cms-project-card img {
+  width: 100%;
+  height: 170px;
+  object-fit: cover;
+  display: block;
+  background: rgba(31,163,163,0.08);
+}
+.cms-project-body {
+  padding: 18px;
+}
+.cms-project-body h3 {
+  margin: 0 0 8px;
+}
+.cms-project-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 12px;
+}
+.cms-project-meta span {
+  border: 1px solid rgba(95,208,200,0.24);
+  background: rgba(31,163,163,0.1);
+  border-radius: 999px;
+  padding: 5px 9px;
+  color: var(--primary-2);
+  font-size: 0.78rem;
+}
+.cms-rich-card .rich-content table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 16px 0;
+}
+.cms-rich-card .rich-content th,
+.cms-rich-card .rich-content td {
+  border: 1px solid var(--line);
+  padding: 10px;
+  text-align: left;
+}
+.cms-rich-card .rich-content img,
+.cms-rich-card .rich-content video,
+.cms-rich-card .rich-content iframe {
+  max-width: 100%;
+  border-radius: 16px;
+  border: 1px solid var(--line);
+}
+.visitor-counter {
+  color: var(--muted);
+}
+.visitor-counter span {
+  color: var(--primary-2);
+  font-weight: 800;
+}
+.footer-admin-link {
+  color: var(--muted);
+  text-decoration: none;
+  font-size: 0.85rem;
+}
+.footer-admin-link:hover { color: var(--primary-2); }
+@media (max-width: 860px) {
+  .recruiter-strip,
+  .cms-project-list { grid-template-columns: 1fr; }
+}

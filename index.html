@@ -5,8 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Jerrine Jacob Mathews | Portfolio</title>
 
-  <meta name="robots" content="noindex, nofollow" />
-  <meta name="googlebot" content="noindex, nofollow" />
+  <meta name="robots" content="index, follow" />
+  <meta name="googlebot" content="index, follow" />
+  <meta name="description" content="Portfolio of Jerrine Jacob Mathews: industrial software, automation, OPC UA, machine connectivity, sensors, diagnostics and applied engineering projects." />
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -67,12 +68,14 @@
               Engineer with interdisciplinary experience across industrial software, machine connectivity, additive manufacturing, optics, sensing, diagnostics, and research-oriented technical development.
             </p>
 
-            <div class="hero-tags">
+            <div class="hero-tags" id="hero-tags">
               <span class="tag" data-i18n="hero.tag1">Industrial Software</span>
               <span class="tag" data-i18n="hero.tag2">OPC UA</span>
               <span class="tag" data-i18n="hero.tag3">Sensors & Optics</span>
               <span class="tag" data-i18n="hero.tag4">Laser Manufacturing</span>
             </div>
+
+            <div id="recruiter-strip" class="recruiter-strip" aria-label="Recruiter summary"></div>
           </div>
 
           <div class="profile-actions">
@@ -104,6 +107,8 @@
           </div>
         </section>
 
+        <section id="cms-rich-sections" class="dashboard-section reveal" hidden></section>
+
         <section id="projects" class="dashboard-section reveal">
           <div class="glass-card">
             <div class="section-head">
@@ -113,6 +118,8 @@
                 This portfolio currently highlights two flagship project directions: the broader Photonex platform and the Photonex Sensor Intelligence Suite, which represents its deeper analytical and research-oriented intelligence layer.
               </p>
             </div>
+
+            <div id="cms-projects" class="cms-project-list"></div>
 
             <div class="expandable-project">
               <div class="project-top">
@@ -483,10 +490,12 @@
   <footer class="site-footer">
     <div class="container footer-inner">
       <p>© <span id="year"></span> Jerrine Jacob Mathews</p>
-      <p data-i18n="footer.note">Shared by direct link only.</p>
+      <p class="visitor-counter">Profile views: <span id="visitor-count">350</span></p>
+      <p><a class="footer-admin-link" href="admin/">Content editor</a></p>
     </div>
   </footer>
 
-  <script src="assets/js/main.js?v=6"></script>
+  <script src="assets/js/main.js?v=7"></script>
+  <script src="assets/js/visitor-counter.js?v=1"></script>
 </body>
 </html>

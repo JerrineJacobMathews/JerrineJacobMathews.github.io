@@ -390,3 +390,140 @@ document.addEventListener("DOMContentLoaded", () => {
   initMenu();
   initExpandables();
 });
+
+// Optional content-driven layer for the /admin editor.
+// The static HTML remains as a safe fallback if content/portfolio-content.json is missing.
+let portfolioCmsContent = null;
+
+function escapeHtml(value) {
+  return String(value ?? "")
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(/"/g, "&quot;")
+    .replace(/'/g, "&#039;");
+}
+
+function setTextBySelector(selector, value) {
+  const el = document.querySelector(selector);
+  if (el && value !== undefined && value !== null) el.textContent = value;
+}
+
+function renderHeroTags(tags) {
+  const host = document.getElementById("hero-tags");
+  if (!host || !Array.isArray(tags) || tags.length === 0) return;
+  host.innerHTML = tags.map((tag) => `<span class="tag">${escapeHtml(tag)}</span>`).join("");
+}
+
+function renderRecruiterStrip(items) {
+  const host = document.getElementById("recruiter-strip");
+  if (!host || !Array.isArray(items) || items.length === 0) return;
+  host.innerHTML = items.slice(0, 6).map((item) => `
+    <div class="recruiter-stat">
+      <strong>${escapeHtml(item.title)}</strong>
+      <span>${escapeHtml(item.text)}</span>
+    </div>
+  `).join("");
+}
+
+function renderCmsProjects(projects) {
+  const host = document.getElementById("cms-projects");
+  if (!host || !Array.isArray(projects) || projects.length === 0) return;
+  const featured = projects.filter((project) => project.featured !== false);
+  host.innerHTML = featured.map((project) => {
+    const image = project.image ? `<img src="${escapeHtml(project.image)}" alt="${escapeHtml(project.title)}">` : "";
+    const tech = Array.isArray(project.technologies) ? project.technologies.slice(0, 8).map((t) => `<span>${escapeHtml(t)}</span>`).join("") : "";
+    const link = project.link ? `<p><a href="${escapeHtml(project.link)}" target="_blank" rel="noopener noreferrer">Open project</a></p>` : "";
+    const video = project.videoUrl ? `<p><a href="${escapeHtml(project.videoUrl)}" target="_blank" rel="noopener noreferrer">Watch demo video</a></p>` : "";
+    return `
+      <article class="cms-project-card">
+        ${image}
+        <div class="cms-project-body">
+          <h3>${escapeHtml(project.title)}</h3>
+          <p>${escapeHtml(project.summary)}</p>
+          ${project.problem ? `<p><strong>Problem:</strong> ${escapeHtml(project.problem)}</p>` : ""}
+          ${project.solution ? `<p><strong>Solution:</strong> ${escapeHtml(project.solution)}</p>` : ""}
+          <div class="cms-project-meta">${tech}</div>
+          ${link}${video}
+        </div>
+      </article>
+    `;
+  }).join("");
+}
+
+function renderRichSections(sections) {
+  const host = document.getElementById("cms-rich-sections");
+  if (!host || !Array.isArray(sections) || sections.length === 0) return;
+  host.hidden = false;
+  host.innerHTML = sections.map((section) => `
+    <div class="glass-card cms-rich-card">
+      <div class="section-head">
+        <p class="section-kicker">${escapeHtml(section.kicker || "Portfolio Section")}</p>
+        <h2>${escapeHtml(section.title || "Section")}</h2>
+      </div>
+      <div class="rich-content">${section.html || ""}</div>
+    </div>
+  `).join("");
+}
+
+function applyPortfolioCmsContent() {
+  if (!portfolioCmsContent) return;
+  const lang = localStorage.getItem("language") || "en";
+  const content = portfolioCmsContent[lang] || portfolioCmsContent.en || portfolioCmsContent;
+  if (!content) return;
+
+  if (content.site) {
+    setTextBySelector(".brand", content.site.name);
+    setTextBySelector('[data-i18n="hero.name"]', content.site.name);
+  }
+  if (content.hero) {
+    setTextBySelector('[data-i18n="hero.kicker"]', content.hero.kicker);
+    setTextBySelector('[data-i18n="hero.subtitle"]', content.hero.title);
+    setTextBySelector('[data-i18n="hero.intro"]', content.hero.intro);
+    renderHeroTags(content.hero.tags);
+    renderRecruiterStrip(content.hero.recruiterStats);
+  }
+  if (content.about) {
+    setTextBySelector('[data-i18n="about.kicker"]', content.about.kicker);
+    setTextBySelector('[data-i18n="about.title"]', content.about.title);
+    const aboutCard = document.querySelector("#about .glass-card");
+    if (aboutCard && content.about.html) {
+      const head = aboutCard.querySelector(".section-head");
+      aboutCard.innerHTML = "";
+      if (head) aboutCard.appendChild(head);
+      const rich = document.createElement("div");
+      rich.className = "rich-content";
+      rich.innerHTML = content.about.html;
+      aboutCard.appendChild(rich);
+    }
+  }
+  renderCmsProjects(content.projects);
+  renderRichSections(content.richSections);
+  if (content.contact) {
+    const emailLink = document.querySelector('a[href^="mailto:"]');
+    if (emailLink && content.contact.email) {
+      emailLink.href = `mailto:${content.contact.email}`;
+      emailLink.textContent = content.contact.email;
+    }
+  }
+}
+
+async function loadPortfolioCmsContent() {
+  try {
+    const response = await fetch("content/portfolio-content.json", { cache: "no-store" });
+    if (!response.ok) return;
+    portfolioCmsContent = await response.json();
+    applyPortfolioCmsContent();
+  } catch {
+    // Keep the static portfolio if the content file cannot be loaded.
+  }
+}
+
+document.addEventListener("DOMContentLoaded", loadPortfolioCmsContent);
+
+// Re-apply CMS content after switching language.
+const originalSetLanguage = setLanguage;
+setLanguage = function patchedSetLanguage(lang) {
+  originalSetLanguage(lang);
+  applyPortfolioCmsContent();
+};
